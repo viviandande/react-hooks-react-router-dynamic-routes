@@ -233,7 +233,7 @@ function MoviesPage({ movies }) {
   return (
     <div>
       <MoviesList movies={movies} />
-      {/* 
+      {/*
         we can use the current URL from the `match` object as part of the path;
         this will generate a url like "/movies/:movieId"
       */}
@@ -336,7 +336,7 @@ function MovieShow({ movies }) {
 
   return (
     <div>
-      {/* And here we access the `movieId` stored in `params` to render 
+      {/* And here we access the `movieId` stored in `params` to render
         information about the selected movie */}
       <h3>{movies[params.movieId].title}</h3>
     </div>
