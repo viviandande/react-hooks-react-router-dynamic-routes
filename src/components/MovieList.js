@@ -1,15 +1,25 @@
-
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function MoviesList({ movies }) {
-  const renderMovies = Object.keys(movies).map((movieID) => (
-    <li key={movieID}>
-      <Link to={`/movies/${movieID}`}>{movies[movieID].title}</Link>
-    </li>
-  ));
-
-  return <ul>{renderMovies}</ul>;
+function NavBar() {
+  return (
+    <div
+      style={{
+        borderBottom: "3px solid maroon",
+        paddingBottom: "10px",
+        marginBottom: "12px",
+        letterSpacing: "5px",
+        fontSize: "1.5em"
+      }}
+    >
+      <NavLink style={{ marginRight: "10px" }} to="/">
+        Home
+      </NavLink>
+      <NavLink style={{ marginRight: "10px" }} to="/movies">
+        Movies
+      </NavLink>
+    </div>
+  );
 }
 
-export default MoviesList;
+export default NavBar;
